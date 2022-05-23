@@ -3,7 +3,6 @@ body {
     font-family: "Lato", sans-serif;
     overflow: hidden;
   }
-  
 /* ---------- Index ---------- */
 .main-container {
   display: flex;
@@ -14,8 +13,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-
-
 .item-left {
   padding: 10px;
   flex: 50%;
@@ -24,7 +21,6 @@ body {
   font-size: 16px;
   margin-bottom: 10px;
 }
-
 .item-right {
   padding: 10px;
   flex: 50%;
@@ -39,7 +35,6 @@ body {
   margin: 0px 20px 20px 20px;
 }
 .item-right ul li a{
-  /* background: #000; */
   border-radius: 10px;
   width: 80px;
   height: 80px;
@@ -54,32 +49,6 @@ body {
   color: #ffffff;
 }
 /* ---------- Index End---------- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .sidebar {
   margin: 0;
   padding: 0px 0px 0px 0px;
@@ -88,7 +57,6 @@ body {
     justify-content: space-between;
     position: fixed;
     top: 0;
-    /* box-shadow: 0px 1px 2px #0770e8; */
     border-bottom: 1px solid #edebeb;
 }
 .sidebar .slider-right{
@@ -122,12 +90,6 @@ body {
     font-size: 14px;
     margin: 0px 6px;
   }
-
-
-
-
-
-  
   div.content {
     padding: 1px 0;
     height: 100vh;
@@ -141,10 +103,6 @@ body {
       color: #0770e8;
       margin-left: 4px;
   }
-  /* .list-group-item.active{
-    background-color: #0770e8;
-    border-color: #0770e8;
-  } */
   @media screen and (max-width: 700px) {
     .sidebar {
       width: 100%;
@@ -154,7 +112,6 @@ body {
     .sidebar a {float: left;}
     div.content {margin-left: 0;}
   }
-  
   @media screen and (max-width: 400px) {
     .sidebar a {
       text-align: center;
