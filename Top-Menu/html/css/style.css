@@ -58,6 +58,8 @@ body {
     position: fixed;
     top: 0;
     border-bottom: 1px solid #edebeb;
+        background: #e8f3f7;
+
 }
 .sidebar .slider-right{
     float: right;
