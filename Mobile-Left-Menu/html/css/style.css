@@ -75,7 +75,7 @@ body {
     color: black;
     padding: 16px 0px 16px 70px;
     text-decoration: none;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #cadee5;
     background: url(../images/home.svg) no-repeat 35px 14px;
     font-size: 14px;
     background-size: 20px;
@@ -211,7 +211,8 @@ body {
     bottom: 0;
     background-color: #fafafa;
     font-family: Helvetica, Arial, sans-serif;
-    box-shadow: 5px 0px 8px #ddd;
+    background: #e8f3f7;
+    border-right: 1px solid #cadee5;
     z-index: 2000;
     width: 0px;
     min-width: 0px;
