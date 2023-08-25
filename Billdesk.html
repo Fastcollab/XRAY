@@ -33,7 +33,7 @@
             var referenceKey = url.searchParams.get("referenceKey");
 
             console.log(appKey);
-            
+
             var flow_config = {
                 merchantId: appKey,
                 bdOrderId: paymentRefNumber,
@@ -57,7 +57,7 @@
             var config = {
                 flowConfig: flow_config,
                 responseHandler: responseHandler,
-                merchantLogo: request.logo ? request.logo : './assets/favicon.png',
+                merchantLogo: './assets/favicon.png',
                 flowType: "payments"
             };
 
