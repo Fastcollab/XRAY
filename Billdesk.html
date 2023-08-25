@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <title></title>
@@ -9,28 +10,41 @@
     <link href="https://uat.billdesk.com/jssdk/v1/dist/billdesksdk/billdesksdk.css" rel="stylesheet">
     <script>
         // Retrieve data from session storage
-        console.log("billDeskpageLoad")
+
         window.onload = function () {
             // var request = {"orderId":"23e808c53d9c89cd707aefc3384017fe","orderIdGuid":null,"orderAmount":2900,"status":null,"cardNumber":"4111111111111111","cardHolderName":"test","expireDate":"02/2025","logo":"https://eva-uat-resources.s3.ap-south-1.amazonaws.com/application-uploads/Company-Logos/eaec13f3-7123-4f9d-bdbd-27fad992ea6c","appKey":"BDUATV2KTK","currency":"INR","email":"dsfa@sdffa.com","mobileNumber":"4352345425","paymentToken":null,"paymentResponse":null,"paymentGatewayURL":null,"isRedirection":null,"redirectionURL":null,"callBookActionPool":false,"paymentRefNumber":"OAO919XU0HI2OR","postData":null,"referenceKey":"OToken A036F27A0A3535A0AF573FE744FEDBC6659A734939C2F34FEAAE12ABE70736703DAB57670B87BE810E9ADDA450019E4B6BB1114B6671332D8E0079F5E10F0B3E8115B233D57F6D5F066997E87130A526AC22213878F47F95DC70DFA5F733FB984D1A7FB5113E01A62F139FEBBAFB6E7D88578EB6C2E9F7559FE9A8C7EAA4014864363C3EED3BC46AF7CECF04C10F8A590A6717A425BA758993C5DD.4145535F55415431","amount":null,"companyName":"TAAS","isMoto":false,"pgClientIntegration":true};
 
-            var requestString = sessionStorage.getItem('flightCreateOrderResponse');
-            console.log("Request string:", requestString);
+            // var requestString = sessionStorage.getItem('flightCreateOrderResponse');
+            // console.log("Request string:", requestString);
 
-            var request = JSON.parse(requestString);
-            console.log("Parsed request object:", request);
+            // var request = JSON.parse(requestString);
+            // console.log("Parsed request object:", request);
 
-            console.log("Request object:", request); // Add this line to check the contents of the request object
+            // console.log("Request object:", request); // Add this line to check the contents of the request object
+            // Get the current URL
+            var currentURL = window.location.href;
+
+            // Create a URL object
+            var url = new URL(currentURL);
+
+            // Get specific query parameter values
+            var appKey = url.searchParams.get("appKey");
+            var paymentRefNumber = url.searchParams.get("paymentRefNumber");
+            var referenceKey = url.searchParams.get("referenceKey");
+
+            console.log(appKey);
+            
             var flow_config = {
-                merchantId: request.appKey,
-                bdOrderId: request.paymentRefNumber,
-                authToken: request.referenceKey,
+                merchantId: appKey,
+                bdOrderId: paymentRefNumber,
+                authToken: referenceKey,
                 childWindow: false,
                 returnUrl: "",
                 crossButtonHandling: 'Y',
                 retryCount: 0
             };
 
-            console.log(flow_config);
+            console.log("flow_config :- ",flow_config);
 
             var responseHandler = function (txn) {
                 console.log(txn);
@@ -56,7 +70,8 @@
 </head>
 
 <body>
-    <h1>Bill desk Page</h1>
+    <h1>Bill desk</h1>
+
 </body>
 
 </html>
