@@ -31,9 +31,10 @@
             var appKey = url.searchParams.get("appKey");
             var paymentRefNumber = url.searchParams.get("paymentRefNumber");
             var referenceKey = url.searchParams.get("referenceKey");
+            var logo = url.searchParams.get("logo");
 
-            console.log(appKey);
-
+            console.log(logo);
+            
             var flow_config = {
                 merchantId: appKey,
                 bdOrderId: paymentRefNumber,
@@ -57,7 +58,7 @@
             var config = {
                 flowConfig: flow_config,
                 responseHandler: responseHandler,
-                merchantLogo: './assets/favicon.png',
+                merchantLogo: logo ? logo : 'https://uilogos.co/img/logotype/circle.png',
                 flowType: "payments"
             };
 
