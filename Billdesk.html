@@ -3,19 +3,15 @@
 
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Bill Desk</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <script type="module" src="https://uat.billdesk.com/jssdk/v1/dist/billdesksdk/billdesksdk.esm.js"></script>
     <script nomodule="" src="https://uat.billdesk.com/jssdk/v1/dist/billdesksdk.js"></script>
     <link href="https://uat.billdesk.com/jssdk/v1/dist/billdesksdk/billdesksdk.css" rel="stylesheet">
    
-
-        <script>
-        // Retrieve data from session storage
-window.addEventListener('resize', function() {            var zoomCss = (window.innerWidth <= 768) ? '250%' : '100%';            document.body.style.zoom = zoomCss;        });
+    <script>
         window.onload = function () {
-            // var request = {"orderId":"23e808c53d9c89cd707aefc3384017fe","orderIdGuid":null,"orderAmount":2900,"status":null,"cardNumber":"4111111111111111","cardHolderName":"test","expireDate":"02/2025","logo":"https://eva-uat-resources.s3.ap-south-1.amazonaws.com/application-uploads/Company-Logos/eaec13f3-7123-4f9d-bdbd-27fad992ea6c","appKey":"BDUATV2KTK","currency":"INR","email":"dsfa@sdffa.com","mobileNumber":"4352345425","paymentToken":null,"paymentResponse":null,"paymentGatewayURL":null,"isRedirection":null,"redirectionURL":null,"callBookActionPool":false,"paymentRefNumber":"OAO919XU0HI2OR","postData":null,"referenceKey":"OToken A036F27A0A3535A0AF573FE744FEDBC6659A734939C2F34FEAAE12ABE70736703DAB57670B87BE810E9ADDA450019E4B6BB1114B6671332D8E0079F5E10F0B3E8115B233D57F6D5F066997E87130A526AC22213878F47F95DC70DFA5F733FB984D1A7FB5113E01A62F139FEBBAFB6E7D88578EB6C2E9F7559FE9A8C7EAA4014864363C3EED3BC46AF7CECF04C10F8A590A6717A425BA758993C5DD.4145535F55415431","amount":null,"companyName":"TAAS","isMoto":false,"pgClientIntegration":true};
-
+    
             // var requestString = sessionStorage.getItem('flightCreateOrderResponse');
             // console.log("Request string:", requestString);
 
@@ -35,7 +31,6 @@ window.addEventListener('resize', function() {            var zoomCss = (w
             var referenceKey = url.searchParams.get("referenceKey");
             var logo = url.searchParams.get("logo");
 
-            console.log(logo);
             
             var flow_config = {
                 merchantId: appKey,
@@ -47,10 +42,8 @@ window.addEventListener('resize', function() {            var zoomCss = (w
                 retryCount: 0
             };
 
-            console.log("flow_config :- ",flow_config);
 
             var responseHandler = function (txn) {
-                console.log(txn);
                 if (txn.response) {
                     alert("callback received status:: ", txn.status);
                     alert("callback received response:: ", txn.response);
@@ -64,7 +57,6 @@ window.addEventListener('resize', function() {            var zoomCss = (w
                 flowType: "payments"
             };
 
-            console.log(config);
             window.loadBillDeskSdk(config);
         };
 
@@ -72,17 +64,9 @@ window.addEventListener('resize', function() {            var zoomCss = (w
 
 </head>
 
-<body style="zoom:100% !importent;">
-     <style>
-        
-        @media screen and (min-width: 1024px) {
-               .body{
-                 zoom:250% !importent ;
-             }
-          }
-              
-    </style>
-    <h1>Bill desk</h1>
+<body style="zoom:250% !importent;">
+    
+    <h1>Please wait</h1>
 
 </body>
 
